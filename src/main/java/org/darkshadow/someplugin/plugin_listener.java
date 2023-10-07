@@ -57,7 +57,7 @@ public record plugin_listener() implements Listener {
                 }
                 player.closeInventory();
             }
-            if (clickedItem.getType() == Material.BRICK){
+            if (clickedItem.getType() == Material.BRICKS){
                 player.getServer().dispatchCommand(player, "togglebuild");
                 try{
                     Thread.sleep(500);
