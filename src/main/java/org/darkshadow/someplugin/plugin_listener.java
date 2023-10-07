@@ -35,37 +35,39 @@ public record plugin_listener() implements Listener {
         Player player = (Player) e.getWhoClicked();
         ItemStack clickedItem = e.getCurrentItem();
         Inventory clickedInventory = e.getClickedInventory();
-        if (clickedInventory.equals(SettingsMenuInventory.SettingsMenuInventory)){
-            e.setCancelled(true);
-            if (clickedItem.getType() == Material.ICE) {
-                player.getServer().dispatchCommand(player, "togglefreeze");
-                try{
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
+        if (clickedInventory != null && clickedItem != null) {
+            if (clickedInventory.equals(SettingsMenuInventory.SettingsMenuInventory)) {
+                e.setCancelled(true);
+                if (clickedItem.getType() == Material.ICE) {
+                    player.getServer().dispatchCommand(player, "togglefreeze");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ex) {
 
+                    }
+                    player.closeInventory();
                 }
-                player.closeInventory();
-            }
-            if (clickedItem.getType() == Material.FEATHER){
-                player.getServer().dispatchCommand(player, "togglefly");
-                try{
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
+                if (clickedItem.getType() == Material.FEATHER) {
+                    player.getServer().dispatchCommand(player, "togglefly");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ex) {
 
+                    }
+                    player.closeInventory();
                 }
-                player.closeInventory();
-            }
-            if (clickedItem.getType() == Material.BRICKS){
-                player.getServer().dispatchCommand(player, "togglebuild");
-                try{
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
+                if (clickedItem.getType() == Material.BRICKS) {
+                    player.getServer().dispatchCommand(player, "togglebuild");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ex) {
+                    }
+                    player.closeInventory();
                 }
-                player.closeInventory();
             }
-        }
-        if (e.getInventory().equals(SettingsMenuInventory.SettingsMenuInventory)){
-            e.setCancelled(true);
+            if (e.getInventory().equals(SettingsMenuInventory.SettingsMenuInventory)) {
+                e.setCancelled(true);
+            }
         }
     }
 
