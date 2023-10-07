@@ -7,12 +7,12 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class CustomInventory {
-    public static Inventory customInventory = Bukkit.createInventory(null, 27, "§eMy Custom Inventory");
+public class SettingsMenuInventory {
+    public static Inventory SettingsMenuInventory = Bukkit.createInventory(null, 27, "§eMy Custom Inventory");
     static {
-        customInventory.setItem(9, CreateItem(Material.ICE, "§bToggle Freeze", 1 ,0));
-        customInventory.setItem(13, CreateItem(Material.FEATHER, "§fToggle Fly", 1, 0));
-        customInventory.setItem(17, CreateItem(Material.BRICKS, "§4Toggle Build", 1, 0));
+        SettingsMenuInventory.setItem(9, CreateItem(Material.ICE, "§bToggle Freeze", 1 ,0));
+        SettingsMenuInventory.setItem(13, CreateItem(Material.FEATHER, "§fToggle Fly", 1, 0));
+        SettingsMenuInventory.setItem(17, CreateItem(Material.BRICKS, "§4Toggle Build", 1, 0));
     }
 
     public static ItemStack CreateItem(Material material, String name, int amount , int custommodeldata){

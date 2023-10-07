@@ -11,7 +11,7 @@ public class settingsCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         Player player = (Player) commandSender;
         player.closeInventory();
-        player.openInventory(CustomInventory.customInventory);
+        player.openInventory(SettingsMenuInventory.SettingsMenuInventory);
         return false;
     }
 }

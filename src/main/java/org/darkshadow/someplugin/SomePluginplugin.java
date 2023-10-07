@@ -1,7 +1,6 @@
 package org.darkshadow.someplugin;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SomePluginplugin extends JavaPlugin {
@@ -17,7 +16,7 @@ public final class SomePluginplugin extends JavaPlugin {
 
         this.getServer().getPluginManager().registerEvents(new plugin_listener(), this);
 
-        new CustomInventory();
+        new SettingsMenuInventory();
 
         this.getCommand("togglebuild").setExecutor(new togglebuildCommand());
         this.getCommand("togglefly").setExecutor(new toggleflyCommand());

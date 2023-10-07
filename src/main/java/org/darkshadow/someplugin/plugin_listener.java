@@ -3,7 +3,6 @@ package org.darkshadow.someplugin;
 import com.destroystokyo.paper.event.player.PlayerJumpEvent;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,9 +10,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -37,7 +34,7 @@ public record plugin_listener() implements Listener {
         Player player = (Player) e.getWhoClicked();
         ItemStack clickedItem = e.getCurrentItem();
         Inventory clickedInventory = e.getClickedInventory();
-        if (clickedInventory.equals(CustomInventory.customInventory)){
+        if (clickedInventory.equals(SettingsMenuInventory.SettingsMenuInventory)){
             e.setCancelled(true);
             if (clickedItem.getType() == Material.ICE) {
                 player.getServer().dispatchCommand(player, "togglefreeze");
@@ -66,7 +63,7 @@ public record plugin_listener() implements Listener {
                 player.closeInventory();
             }
         }
-        if (e.getInventory().equals(CustomInventory.customInventory)){
+        if (e.getInventory().equals(SettingsMenuInventory.SettingsMenuInventory)){
             e.setCancelled(true);
         }
     }
