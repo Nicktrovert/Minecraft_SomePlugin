@@ -18,11 +18,11 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnPlayerBlockBreak(BlockBreakEvent event){
-        if (SomePluginplugin.togglefreeze){
+        if (SomePlugin.togglefreeze){
             event.setCancelled(true);
             return;
         }
-        if (SomePluginplugin.togglebuild){
+        if (SomePlugin.togglebuild){
             return;
         } else{
             event.setCancelled(true);
@@ -70,7 +70,7 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnEntityDamage(EntityDamageEvent event){
-        if (SomePluginplugin.togglefreeze){
+        if (SomePlugin.togglefreeze){
             event.setCancelled(true);
             return;
         }
@@ -78,11 +78,11 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnPlayerBlockPlace(BlockPlaceEvent event) {
-        if (SomePluginplugin.togglefreeze){
+        if (SomePlugin.togglefreeze){
             event.setCancelled(true);
             return;
         }
-        if (SomePluginplugin.togglebuild) {
+        if (SomePlugin.togglebuild) {
             return;
         } else {
             event.setCancelled(true);
@@ -91,7 +91,7 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnPlayerMove(PlayerMoveEvent event){
-        if (SomePluginplugin.togglefreeze){
+        if (SomePlugin.togglefreeze){
             event.setCancelled(true);
             return;
         }
@@ -99,14 +99,14 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnPlayerJump(PlayerJumpEvent event){
-        if (SomePluginplugin.togglefreeze){
+        if (SomePlugin.togglefreeze){
             event.setCancelled(true);
             return;
         }
         if(event.getPlayer().getGameMode().equals(GameMode.CREATIVE)){
             return;
         }
-        if (SomePluginplugin.togglefly) {
+        if (SomePlugin.togglefly) {
             event.getPlayer().setAllowFlight(true);
         } else {
             event.getPlayer().setAllowFlight(false);
