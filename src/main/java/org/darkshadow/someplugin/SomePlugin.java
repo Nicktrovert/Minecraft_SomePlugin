@@ -32,8 +32,6 @@ public final class SomePlugin extends JavaPlugin {
         this.getCommand("heal").setExecutor(new healCommand());
         this.getCommand("settings").setExecutor(new settingsCommand());
 
-        Bukkit.getServer().broadcastMessage("§aSomePlugin Started \n §6 Made by Nick Helmers");
-
     }
 
     @Override

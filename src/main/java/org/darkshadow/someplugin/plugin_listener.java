@@ -10,6 +10,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -87,6 +88,11 @@ public record plugin_listener() implements Listener {
         } else {
             event.setCancelled(true);
         }
+    }
+
+    @EventHandler
+    public void OnPlayerJoin(PlayerJoinEvent event){
+        event.getPlayer().sendMessage("\n§aThis server Uses SomePlugin \n§6The Plugin was Made by Nicktrovert \n§6https://github.com/Nicktrovert");
     }
 
     @EventHandler
