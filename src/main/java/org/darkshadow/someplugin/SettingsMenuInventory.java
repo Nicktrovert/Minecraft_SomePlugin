@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class SettingsMenuInventory {
-    public static Inventory SettingsMenuInventory = Bukkit.createInventory(null, 27, "§eMy Custom Inventory");
+    public static Inventory SettingsMenuInventory = Bukkit.createInventory(null, 27, "§Settings Menu");
     static {
         SettingsMenuInventory.setItem(9, CreateItem(Material.ICE, "§bToggle Freeze", 1 ,0));
         SettingsMenuInventory.setItem(13, CreateItem(Material.FEATHER, "§fToggle Fly", 1, 0));
