@@ -1,4 +1,7 @@
 togglefreeze: false
 togglefly: false
 togglebuid: true
-onjoinmessage: \n§aThis server Uses SomePlugin \n§6The Plugin was Made by Nicktrovert \n§6https://github.com/Nicktrovert
+onjoinmessage:
+  §aThis server Uses SomePlugin 
+  §6The Plugin was Made by Nicktrovert 
+  §6https://github.com/Nicktrovert
