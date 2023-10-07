@@ -18,7 +18,6 @@ public final class SomePluginplugin extends JavaPlugin {
 
         this.getServer().getPluginManager().registerEvents(new plugin_listener(), this);
 
-        saveDefaultConfig();
         config = getConfig();
         togglebuild = config.getBoolean("togglebuild");
         togglefly = config.getBoolean("togglefly");
