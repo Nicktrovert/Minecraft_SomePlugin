@@ -20,9 +20,9 @@ public final class SomePluginplugin extends JavaPlugin {
 
         saveDefaultConfig();
         config = getConfig();
-        togglebuild = (boolean) config.get("togglebuild");
-        togglefly = (boolean) config.get("togglefly");
-        togglefreeze = (boolean) config.get("togglefreeze");
+        togglebuild = config.getBoolean("togglebuild");
+        togglefly = config.getBoolean("togglefly");
+        togglefreeze = config.getBoolean("togglefreeze");
 
         new SettingsMenuInventory();
 
