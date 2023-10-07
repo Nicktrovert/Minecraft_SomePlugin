@@ -10,8 +10,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class CustomInventory {
     public static Inventory customInventory = Bukkit.createInventory(null, 27, "§eMy Custom Inventory");
     static {
-        customInventory.setItem(9, CreateItem(Material.ICE, "§Toggle Freeze", 1 ,0));
-        customInventory.setItem(13, CreateItem(Material.FEATHER, "§Toggle Fly", 1, 0));
+        customInventory.setItem(9, CreateItem(Material.ICE, "§bToggle Freeze", 1 ,0));
+        customInventory.setItem(13, CreateItem(Material.FEATHER, "§fToggle Fly", 1, 0));
         customInventory.setItem(17, CreateItem(Material.BRICKS, "§4Toggle Build", 1, 0));
     }
 
