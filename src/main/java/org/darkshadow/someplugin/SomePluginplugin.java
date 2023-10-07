@@ -1,6 +1,7 @@
 package org.darkshadow.someplugin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SomePluginplugin extends JavaPlugin {
@@ -26,10 +27,12 @@ public final class SomePluginplugin extends JavaPlugin {
         this.getCommand("heal").setExecutor(new healCommand());
         this.getCommand("settings").setExecutor(new settingsCommand());
 
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say §aSomePlugin Started \n §6Made by Nick Helmers");
+
     }
 
     @Override
     public void onDisable() {
-
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say §cSomePlugin Disabled \n §6Made by Nick Helmers");
     }
 }
