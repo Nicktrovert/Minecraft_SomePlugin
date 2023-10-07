@@ -33,7 +33,7 @@ public record plugin_listener() implements Listener {
     }
 
     @EventHandler
-    public void onInventoryClick(InventoryClickEvent e){
+    public void onInventoryClick(InventoryClickEvent e){ //test
         Player player = (Player) e.getWhoClicked();
         ItemStack clickedItem = e.getCurrentItem();
         Inventory clickedInventory = e.getClickedInventory();
