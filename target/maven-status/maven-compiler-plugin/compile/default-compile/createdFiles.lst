@@ -1,0 +1,9 @@
+org\darkshadow\someplugin\CustomInventory.class
+org\darkshadow\someplugin\togglefreezeCommand.class
+org\darkshadow\someplugin\SomePluginplugin.class
+org\darkshadow\someplugin\togglebuildCommand.class
+org\darkshadow\someplugin\toggleflyCommand.class
+org\darkshadow\someplugin\settingsCommand.class
+org\darkshadow\someplugin\plugin_listener.class
+org\darkshadow\someplugin\flyCommand.class
+org\darkshadow\someplugin\healCommand.class

@@ -1,0 +1,17 @@
+name: SomePluginplugin
+version: '1.0-SNAPSHOT'
+main: org.darkshadow.someplugin.SomePluginplugin
+api-version: '1.20'
+commands:
+  togglebuild:
+    description: toggle placing/breaking on/off
+  togglefly:
+    description: toggles flying
+  togglefreeze:
+    description: freeze everyone
+  fly:
+    description: makes you fly
+  heal:
+    description: heals you
+  settings:
+    description: opens settings
