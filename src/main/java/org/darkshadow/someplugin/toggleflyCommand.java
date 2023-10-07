@@ -11,6 +11,7 @@ public class toggleflyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         SomePluginplugin.togglefly = !SomePluginplugin.togglefly;
+        SomePluginplugin.config.set("togglefly", SomePluginplugin.togglefly);
         commandSender.sendMessage("flying = " + SomePluginplugin.togglefly);
         if (!SomePluginplugin.togglefly){
             for (Player player : commandSender.getServer().getOnlinePlayers()){

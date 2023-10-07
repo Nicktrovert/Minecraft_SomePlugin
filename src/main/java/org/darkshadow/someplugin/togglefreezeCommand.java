@@ -9,6 +9,7 @@ public class togglefreezeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         SomePluginplugin.togglefreeze = !SomePluginplugin.togglefreeze;
+        SomePluginplugin.config.set("togglefreeze", SomePluginplugin.togglefreeze);
         commandSender.sendMessage("freeze = " + SomePluginplugin.togglefreeze);
         if (SomePluginplugin.togglefreeze){
             commandSender.getServer().broadcastMessage("Everyone was frozen");

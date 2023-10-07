@@ -1,12 +1,14 @@
 package org.darkshadow.someplugin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SomePluginplugin extends JavaPlugin {
 
 
     //-----settings------
+    public static FileConfiguration config;
     public static boolean togglebuild = true;
     public static boolean togglefly = false;
     public static boolean togglefreeze = false;
@@ -15,6 +17,12 @@ public final class SomePluginplugin extends JavaPlugin {
     public void onEnable() {
 
         this.getServer().getPluginManager().registerEvents(new plugin_listener(), this);
+
+        saveDefaultConfig();
+        config = getConfig();
+        togglebuild = (boolean) config.get("togglebuild");
+        togglefly = (boolean) config.get("togglefly");
+        togglefreeze = (boolean) config.get("togglefreeze");
 
         new SettingsMenuInventory();
 
