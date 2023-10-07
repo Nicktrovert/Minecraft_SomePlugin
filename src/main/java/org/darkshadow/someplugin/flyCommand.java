@@ -12,7 +12,7 @@ public class flyCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
         Player player = (Player) commandSender;
         player.setAllowFlight(true);
-        player.teleport(player.getLocation().add(0, 0.5, 0));
+        player.teleport(player.getLocation().add(0, 0.1, 0));
         player.setFlying(true);
         return false;
     }
