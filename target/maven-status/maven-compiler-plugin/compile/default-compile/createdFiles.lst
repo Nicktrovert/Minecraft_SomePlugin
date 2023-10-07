@@ -1,6 +1,6 @@
 org\darkshadow\someplugin\togglefreezeCommand.class
+org\darkshadow\someplugin\SomePlugin.class
 org\darkshadow\someplugin\SettingsMenuInventory.class
-org\darkshadow\someplugin\SomePluginplugin.class
 org\darkshadow\someplugin\togglebuildCommand.class
 org\darkshadow\someplugin\toggleflyCommand.class
 org\darkshadow\someplugin\settingsCommand.class
