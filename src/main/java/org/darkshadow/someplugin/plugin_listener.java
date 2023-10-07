@@ -92,7 +92,10 @@ public record plugin_listener() implements Listener {
 
     @EventHandler
     public void OnPlayerJoin(PlayerJoinEvent event){
-        event.getPlayer().sendMessage("\n§aThis server Uses SomePlugin \n§6The Plugin was Made by Nicktrovert \n§6https://github.com/Nicktrovert");
+        String joinmessage = SomePlugin.config.getString("onjoinmessage");
+        if (joinmessage != null) {
+            event.getPlayer().sendMessage(joinmessage);
+        }
     }
 
     @EventHandler
