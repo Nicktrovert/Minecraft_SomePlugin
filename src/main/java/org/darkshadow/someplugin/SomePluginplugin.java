@@ -6,7 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SomePluginplugin extends JavaPlugin {
 
-    CustomInventory customInventory;
 
     //-----settings------
     public static boolean togglebuild = true;
@@ -18,7 +17,7 @@ public final class SomePluginplugin extends JavaPlugin {
 
         this.getServer().getPluginManager().registerEvents(new plugin_listener(), this);
 
-        customInventory = new CustomInventory();
+        new CustomInventory();
 
         this.getCommand("togglebuild").setExecutor(new togglebuildCommand());
         this.getCommand("togglefly").setExecutor(new toggleflyCommand());
