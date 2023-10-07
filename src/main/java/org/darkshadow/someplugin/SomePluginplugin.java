@@ -38,6 +38,7 @@ public final class SomePluginplugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        saveConfig();
         Bukkit.getServer().broadcastMessage("§cSomePlugin Disabled \n §6Made by Nick Helmers");
     }
 }
