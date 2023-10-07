@@ -62,7 +62,6 @@ public record plugin_listener() implements Listener {
                 try{
                     Thread.sleep(500);
                 } catch (InterruptedException ex) {
-
                 }
                 player.closeInventory();
             }
