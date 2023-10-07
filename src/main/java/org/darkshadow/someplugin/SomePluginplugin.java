@@ -27,12 +27,12 @@ public final class SomePluginplugin extends JavaPlugin {
         this.getCommand("heal").setExecutor(new healCommand());
         this.getCommand("settings").setExecutor(new settingsCommand());
 
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say §aSomePlugin Started \n §6Made by Nick Helmers");
+        Bukkit.getServer().broadcastMessage("§aSomePlugin Started \n §6 Made by Nick Helmers");
 
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say §cSomePlugin Disabled \n §6Made by Nick Helmers");
+        Bukkit.getServer().broadcastMessage("§cSomePlugin Disabled \n §6Made by Nick Helmers");
     }
 }
